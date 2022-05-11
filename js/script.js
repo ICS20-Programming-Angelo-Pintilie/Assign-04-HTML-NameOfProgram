@@ -12,9 +12,9 @@
 function displayCost() {
   	// initialize constants
 	const HST = 0.13
-  const small = 4.50
-  const reg = 7.00
-  const large = 8.50
+  const SMALL = 4.50
+  const REG = 7.00
+  const LARGE = 8.50
   const BROWN_SUGAR = 1.15
   const RAINBOW = 0.90
   const CRYSTAL = 1.00
@@ -22,19 +22,36 @@ function displayCost() {
   const PLAIN = 0.00
 // initialize variables
   let tax = 0
+  let finalOrder = "Your final order: "
   let price = 0
   let priceTaxed = ''
-	let age = parseInt(document.getElementById('size').value)	
-	let select = document.getElementById('topping');
-	let day = select.options[select.selectedIndex].value;
+	// get the size of bubble tea the user wants 
+	let sizeBoba = document.getElementById('sizeBoba');
+	let bobaSize = sizeBoba.options[sizeBoba.selectedIndex].value;
 
-  	
-	if (age < 5 || age > 95) {
-		cost = "The cost of admission for you is FREE."
+	if (bobaSize == "SMALL") {
+		price = price + SMALL;
+    finalOrder = finalOrder + "<br><b>Small Bubble Tea price" + SMALL.toFixed(2) + "</b>"
 	}
-	else if ((day == "Tuesday") || (day == "Thursday)") 
-			 || (age >=12) && (age <=21)) {
-		cost = "Student discount is applied to your admission."
+else if (bobaSize == "REG") {
+		price = price + REG;
+    orderSummary = orderSummary + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>
+	}
+  else if(bobaSize == "LARGE"){		
+		price = price + LARGE
+    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + large.toFixed(2) + "</b>"
+	}
+    	if (bobaSize == "BROWN_SUGAR") {
+		price = price + SMALL;
+    finalOrder = finalOrder + "<br><b>Small Bubble Tea price" + SMALL.toFixed(2) + "</b>"
+	}
+else if (bobaSize == "REG") {
+		price = price + REG;
+    orderSummary = orderSummary + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>
+	}
+  else if(bobaSize == "LARGE"){		
+		price = price + LARGE
+    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + large.toFixed(2) + "</b>"
 	}
 	else if ((age > 0) || (day != "")) {		
 		cost = "You must pay regular admission."
