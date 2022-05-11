@@ -35,11 +35,11 @@ function displayCost() {
 	}
 else if (bobaSize == "REG") {
 		price = price + REG;
-    orderSummary = orderSummary + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>
+    finalOrder = finalOrder + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>"
 	}
   else if(bobaSize == "LARGE"){		
 		price = price + LARGE
-    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + large.toFixed(2) + "</b>"
+    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + LARGE.toFixed(2) + "</b>"
 	}
     	if (bobaSize == "BROWN_SUGAR") {
 		price = price + SMALL;
@@ -47,11 +47,11 @@ else if (bobaSize == "REG") {
 	}
 else if (bobaSize == "REG") {
 		price = price + REG;
-    orderSummary = orderSummary + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>
+    finalOrder = finalOrder + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>"
 	}
   else if(bobaSize == "LARGE"){		
 		price = price + LARGE
-    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + large.toFixed(2) + "</b>"
+    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + LARGE.toFixed(2) + "</b>"
 	}
 	else if ((age > 0) || (day != "")) {		
 		cost = "You must pay regular admission."
