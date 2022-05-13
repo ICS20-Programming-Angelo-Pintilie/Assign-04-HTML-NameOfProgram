@@ -22,22 +22,26 @@
 			<tr align = "center">
 				<td valign="top" align="right">
 					<h3>This site allows the customer to formulate an order online rather than apearing in person:</h3>
-					<form action="javascript:displayCost()">						
-<!-- Code for drop-down menu -->		
-						<label for="topping">Toppings:</label>
-						<select name="topping" id="topping">
-						    <option value="">Add-ins</option>
-						    <option value="BROWN_SUGAR">Brown sugar pearls</option>
-						    <option value="RAINBOW">Rainbow jelly</option>
-						    <option value="CRYSTAL">Crystal pearls</option>
-						    <option value="REG_PEARL">Regular boba</option>
-						    <option value="PLAIN">Plain(no Add-ins)</option>
-						</select>
+					<form action="javascript:displayCost()">			
+<!-- Checkboxes for each topping -->
+        <input type="checkbox" id="BROWN_SUGAR" name="BROWN_SUGAR">
+        <label for="BROWN_SUGAR">Brown sugar boba</label><br>
+        
+        <input type="checkbox" id="RAINBOW" name="RAINBOW" value="RAINBOW">
+        <label for="RAINBOW">Rainbow jelly</label><br>
+        
+        <input type="checkbox" id="CRYSTAL" name="CRYSTAL" value="CRYSTAL">
+        <label for="CRYSTAL">Crystal boba</label><br>
+        
+        <input type="checkbox" id="REG_PEARL" name="REG_PEARL" value="REG_PEARL">
+        <label for="REG_PEARL">Regular boba</label><br>
+        
+        <input type="checkbox" id="ICE" name="ICE" value="ICE">
+        <label for="ICE">Ice</label><br>
 						<br><br>
-       <!-- Code for drop-down menu -->		
+       <!-- Code for drop-down menu (sizes) -->		
 						<label for="size">Size:</label>
 						<select name="sizeBoba" id="size">
-						    <option value="">Sizes</option>
 						    <option value="small">Small</option>
 						    <option value="reg">Regular(medium)</option>
 						    <option value="large">Large</option>
@@ -52,10 +56,14 @@
 				</td>
 			</tr>
 		</table>
-		<!-- Create a space where the user information will be displayed -->
-		<div id="display-results">
-			
-		</div>
-		  </center>
+      <!--  where the price of the order will be displyed -->
+     <div id="finalOrder"></div>
+    <!-- total price -->
+     <div id="displayTotal"> </div>
+     <!-- Tax price -->
+     <div id="displayTax"></div>
+     <!-- Total price the order will cost-->
+     <div id="displayPriceTaxed"></div>  
+     <br><br>
   </body>
 </html>
