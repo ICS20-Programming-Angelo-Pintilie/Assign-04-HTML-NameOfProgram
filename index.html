@@ -21,8 +21,9 @@
 		<table>
 			<tr align = "center">
 				<td valign="top" align="right">
-					<h3>This site allows the customer to formulate an order online rather than apearing in person:</h3>
-					<form action="javascript:displayCost()">			
+					<center><h3>This site allows the customer to formulate an order online, rather than apearing in person.</h3></center>
+					<form action="javascript:displayCost()">	
+            <h4>Select your toppings here (optional):</h4>
 <!-- Checkboxes for each topping -->
         <input type="checkbox" id="BROWN_SUGAR" name="BROWN_SUGAR">
         <label for="BROWN_SUGAR">Brown sugar boba</label><br>
@@ -39,6 +40,7 @@
         <input type="checkbox" id="ICE" name="ICE" value="ICE">
         <label for="ICE">Ice</label><br>
 						<br><br>
+            <h4>Select your size of drink here (mandatory):</h4>
        <!-- Code for drop-down menu (sizes) -->		
 						<label for="size">Size:</label>
 						<select name="sizeBoba" id="size">
@@ -47,7 +49,7 @@
 						    <option value="large">Large</option>
 						</select>
 						<br><br>
-						<input type="submit" value="Display Cost">
+						<input type="submit" value="Display Order">
 					</form>
 				</td>
         <!-- Code for image -->
