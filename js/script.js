@@ -69,7 +69,7 @@ else if (bobaSize == "REG") {
   let iceChosen = document.getElementById("ICE").checked;  
   if (iceChosen){  
     price = price + ICE;
-    orderSummary = orderSummary + "<br>  - Bell Pepper";
+    orderSummary = orderSummary + "<br> Ice added";
   } 
   tax = price * HST;
   priceTaxed = price + tax;
