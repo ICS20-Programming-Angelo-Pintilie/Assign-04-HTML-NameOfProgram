@@ -44,41 +44,35 @@ else if (bobaSize == "REG") {
       // code for add-ins
   let bsbChosen = document.getElementById("BROWN_SUGAR").checked;  
   if (bsbChosen){  
-    // if brown sugar boba is picked, add to price
-    total = total + BROWN_SUGAR;
+    price = price + BROWN_SUGAR;
     finalOrder = finalOrder + "<br> Brown sugar added";
   }  
   
   let cbChosen = document.getElementById("CRYSTAL").checked;  
   if (cbChosen){
-    // if cilantro is checked, add cilantro to price
-    total = total + CRYSTAL;
+    price = price + CRYSTAL;
     finalOrder = finalOrder + "<br> Crystal boba added";
   }  
 
   let rjChosen = document.getElementById("RAINBOW").checked;  
   if (rjChosen){  
-    // if lettuce is checked, add lettuce to price
-    total = total + RAINBOW;
+    price = price + RAINBOW;
     finalOrder = finalOrder + "<br> Rainbow jelly added";
   }  
 
   let rpChosen = document.getElementById("REG_PEARL").checked;  
   if (rpChosen){  
-    // if cheese is checked, add cheese to price
-    total = total + REG_PEARL;
+    price = price + REG_PEARL;
     finalOrder = finalOrder + "<br> Regular boba added";
   }  
 
   let iceChosen = document.getElementById("ICE").checked;  
   if (iceChosen){  
-    // if pepper is checked, add pepper to price
-    total = total + ICE;
+    price = price + ICE;
     orderSummary = orderSummary + "<br>  - Bell Pepper";
   } 
- // calculate different costs (subtotal, tax, total)
-  tax = total * HST;
-  priceTaxed = total + tax;
+  tax = price * HST;
+  priceTaxed = price + tax;
 
   // display the costs of the order
   // display order summary
