@@ -29,17 +29,20 @@ function displayCost() {
 	let sizeBoba = document.getElementById('sizeBoba');
 	let bobaSize = sizeBoba.options[sizeBoba.selectedIndex].value;
 
-	if (bobaSize == "SMALL") {
+	if (bobaSize == "small") {
 		price = price + SMALL;
-    finalOrder = finalOrder + "<br><b>Small Bubble Tea price" + SMALL.toFixed(2) + "</b>"
+    finalOrder = finalOrder + "<br><b>Small Bubble Tea price $" + 
+ SMALL.toFixed(2) + "</b>"
 	}
-else if (bobaSize == "REG") {
+else if (bobaSize == "reg") {
 		price = price + REG;
-    finalOrder = finalOrder + "<br><b>Regular/Medium Bubble Tea price" + REG.toFixed(2) + "</b>"
+    finalOrder = finalOrder + "<br><b>Regular/Medium Bubble Tea price $" + 
+ REG.toFixed(2) + "</b>"
 	}
-  else if(bobaSize == "LARGE"){		
+  else if(bobaSize == "large"){		
 		price = price + LARGE
-    finalOrder = finalOrder + "<br><b>Large Bubble Tea price" + LARGE.toFixed(2) + "</b>"
+    finalOrder = finalOrder + "<br><b>Large Bubble Tea price $" + 
+ LARGE.toFixed(2) + "</b>"
 	}
       // code for add-ins
   let bsbChosen = document.getElementById("BROWN_SUGAR").checked;  
@@ -74,13 +77,14 @@ else if (bobaSize == "REG") {
   tax = price * HST;
   priceTaxed = price + tax;
 
+  
   // display the costs of the order
   // display order summary
-  document.getElementById('finalOrder').innerHTML = "<h3>" + finalOrder + "</h3>";
+  document.getElementById('finalOrder').innerHTML = "<h3>" + finalOrder +  "</h3>";
   // display subtotal price of order
-  document.getElementById('displayTotal').innerHTML = "<p>The order's subtotal is " + total.toFixed(2) + ".</p>";
+  document.getElementById('displayTotal').innerHTML = "<p>The order's subtotal is $" + price.toFixed(2) + ".</p>";
   // display tax price of order
-  document.getElementById('displayTax').innerHTML = "<p>Your order's tax will be " + tax.toFixed(2) + ".</p>";
+  document.getElementById('displayTax').innerHTML = "<p>Your order's tax will be $" + tax.toFixed(2) + ".</p>";
   // display total price of order
-  document.getElementById('displayPriceTaxed').innerHTML = "<p>The full order will cost " + priceTaxed.toFixed(2) + ".</p>";
+  document.getElementById('displayPriceTaxed').innerHTML = "<p>The full order will cost $" + priceTaxed.toFixed(2) + ".</p>";
 }
