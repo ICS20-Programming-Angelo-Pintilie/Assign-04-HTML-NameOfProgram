@@ -7,7 +7,7 @@
 "use strict"
 
 /**
- * This function displays the discount depending on age and day of the week.
+ * This function displays the final cost depending on size and toppings added.
  */
 function displayCost() {
   	// initialize constants
@@ -82,9 +82,9 @@ else if (bobaSize == "reg") {
   // display order summary
   document.getElementById('finalOrder').innerHTML = "<h3>" + finalOrder +  "</h3>";
   // display subtotal price of order
-  document.getElementById('displayTotal').innerHTML = "<p>The order's subtotal is $" + price.toFixed(2) + ".</p>";
+  document.getElementById('displayTotal').innerHTML = "<p>The order's subtotal is $" + price.toFixed(2) + "</p>";
   // display tax price of order
-  document.getElementById('displayTax').innerHTML = "<p>Your order's tax will be $" + tax.toFixed(2) + ".</p>";
+  document.getElementById('displayTax').innerHTML = "<p>Your order's tax will be $" + tax.toFixed(2) + "</p>";
   // display total price of order
-  document.getElementById('displayPriceTaxed').innerHTML = "<p>The full order will cost $" + priceTaxed.toFixed(2) + ".</p>";
+  document.getElementById('displayPriceTaxed').innerHTML = "<p>The full order will cost $" + priceTaxed.toFixed(2) + "</p>";
 }
