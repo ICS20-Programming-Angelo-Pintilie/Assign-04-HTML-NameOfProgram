@@ -69,7 +69,7 @@ else if (bobaSize == "reg") {
     finalOrder = finalOrder + "<br> Regular boba added";
   }  
 
-  let iceChosen = document.getElementById("ICE").checked;  
+  let iceChosen = document.getElementById("ICE").checked; 
   if (iceChosen){  
     price = price + ICE;
     orderSummary = orderSummary + "<br> Ice added";
